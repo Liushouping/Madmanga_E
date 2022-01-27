@@ -21,5 +21,27 @@
   src: url(XtreemFat_Demo.ttf) format("opentype");
 }
 /* 
-   Swiper
+   animtion
 */
+@keyframes letter {
+  0% {
+    filter: drop-shadow(0 0 10px #21c4fa) drop-shadow(0 0 20px #21c4fa) sepia(20%);
+    opacity: .85;
+  }
+  45% {
+    filter: drop-shadow(0 0 20px #21c4fa) drop-shadow(0 0 20px #21c4fa) sepia(50%);
+    opacity: .85;
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #21c4fa) drop-shadow(0 0 20px #21c4fa) sepia(80%);
+    opacity: 1;
+  }
+  55% {
+    filter: drop-shadow(0 0 30px #21c4fa) drop-shadow(0 0 20px #21c4fa) sepia(10%);
+    opacity: .85;
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #21c4fa) drop-shadow(0 0 20px #21c4fa);
+    opacity: .8;
+  }
+}
