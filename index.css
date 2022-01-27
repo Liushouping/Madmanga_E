@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/architectsdaughter/v17/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4-7jA-U.woff2) format('woff2');
+  src: url(ArchitectsDaughter-Regular.ttf) format("opentype");
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(./image/XtreemFat_Demo.ttf) format('ttf');
+  src: url(XtreemFat_Demo.ttf) format("opentype");
 }
 /* 
    Swiper
