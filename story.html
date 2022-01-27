@@ -106,7 +106,9 @@ class="scroll-smooth">
 			</div>
 			<div 
 			class="w-full px-10 lg:px-0 lg:w-2/3 mx-4 py-0 md:py-6">
-				<video class="w-full h-full" src="https://www.gama.io/a5fdc703509089de7c9df34e7df95649.mp4" autoplay="" playsinline="" webkit-playsinline="" muted="" loop="" style=""></video>
+				<video id="video" class="w-full h-full" controls loop autoplay playsinline muted>
+						<source src="./image/mad.mp4" type="video/mp4">
+				</video>
 			</div>
 		</div>
 		<!-- 右下標誌 -->
@@ -127,23 +129,5 @@ class="scroll-smooth">
 				<img src="./image/ft-logo-02.png" class="w-full">
 		</div>
 	</section>
-
-<script>
-	// * Story Swiper
-	var story = new Swiper("#story", {
-		direction: "horizontal",
-		mousewheel: true,
-		slidesPerView: 1,
-		autoplay: {
-          delay: 9000,
-          disableOnInteraction: false,
-        },
-		loop: true,
-        navigation: {
-          clickable: true,
-        }
-    });
-</script>
-
 </body>
 </html>
