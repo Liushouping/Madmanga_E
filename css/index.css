@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+   Font Family
+*/
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/architectsdaughter/v17/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4-7jA-U.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Xtreem Fat Demo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./image/XtreemFat_Demo.ttf) format('ttf');
+}
+/* 
+   Swiper
+*/
