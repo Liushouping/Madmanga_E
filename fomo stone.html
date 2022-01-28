@@ -6,7 +6,7 @@ class="scroll-smooth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./index.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.js" defer ></script>
   <title>fomo stone</title>
   <script>
   tailwind.config = {
@@ -32,30 +32,111 @@ class="scroll-smooth">
   </script>
 
 </head>
-<body>
+<body 
+x-data="{ isOpen: false }">
+	<!-- 導覽列 -->
+	<section 
+	:class="isOpen ? 'fixed top-0 z-50' : 'hidden'" 
+	class="w-screen h-screen bg-deeporange">
+		<div 
+		class="flex justify-center items-center h-screen">
+			<ul 
+			class="space-y-6">
+				<li 
+				class="text-white text-center text-[14px] hover:text-yellow-300">
+					<a href="index.html" class="appearance-none">
+						HOME
+					</a>
+				</li>
+				<li 
+				class="text-white text-center text-[14px] hover:text-yellow-300">
+					<a href="story.html" class="appearance-none">
+						STORY
+					</a>
+				<li 
+				class="text-white text-center text-[14px] hover:text-yellow-300">
+					<a href="fomo stone.html" class="appearance-none">
+						FOMO STONE
+					</a>
+				</li>
+				<li 
+				class="text-white text-center text-[14px] hover:text-yellow-300">
+					<a href="team.html" class="appearance-none">
+						TEAM
+					</a>
+				</li>
+				<li>
+					<ul class="flex flex-row space-x-4 w-40 bg-black ju">
+						<li>
+							<a href="" class="appearance-none">
+								<img src="./image/discord.svg" class="w-4 h-4 hover:opacity-70">
+							</a>
+						</li>
+						<li>
+							<a href="" class="appearance-none">
+								<img src="./image/twitter.svg" class="w-4 h-4 hover:opacity-70">
+							</a>
+						</li>
+						<li>
+							<a href="" class="appearance-none">
+								<img src="./image/facebook.svg" class="w-4 h-4 hover:opacity-70">
+							</a>
+						</li>
+						<li>
+							<a href="" class="appearance-none">
+								<img src="./image/instagram.svg" class="w-4 h-4 hover:opacity-70">
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- 選單 -->
+		<div 
+		class="absolute right-5 top-5 z-30">
+				<button 
+				type="button" 
+				@click="isOpen = false">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+		</div>
+		<!-- 選單 -->
+	</section>
+	<!-- 導覽列 -->
 	<section 
 	class="relative w-screen h-screen bg-cover bg-center overflow-hidden" style="background-image:url(./image/banner-02.png);">
 		<header>
 			<nav 
 			class="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-6 px-4">
 				<ul 
-				class="flex flex-row space-x-6 md:space-x-16">
+				class="hidden lg:flex flex-row space-x-6 md:space-x-16">
 					<li class="text-white hover:text-deeporange text-[14px]">
 						<a href="index.html" class="appearance-none">HOME</a>
 					</li>
 					<li class="text-white hover:text-deeporange text-[14px]">
 						<a href="story.html" class="appearance-none">STORY</a>
 					</li>
-					<li class="text-white hover:text-deeporange text-[14px]">
+					<li class="text-deeporange hover:text-deeporange text-[14px]">
 						<a href="fomo stone.html" class="appearance-none">FOMO STONE</a>
 					</li>
-					<li class="text-deeporange hover:text-deeporange text-[14px]">
+					<li class="text-white hover:text-deeporange text-[14px]">
 						<a href="team.html" class="appearance-none">TEAM</a>
 					</li>
 				</ul>
 
+				<button 
+				@click="isOpen = true" 
+				type="button" 
+				class="lg:hidden flex absolute right-5 top-5">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+					</svg>
+				</button>
+
 				<ul 
-				class="flex flex-row space-x-4 text-white py-3 md:py-4 md:py-0">
+				class="hidden lg:flex flex-row space-x-4 text-white py-3 md:py-4 md:py-0">
 					<li>
 						<a href="" class="appearance-none">
 							<img src="./image/discord.svg" class="w-4 h-4 hover:opacity-70">
