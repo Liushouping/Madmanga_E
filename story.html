@@ -45,14 +45,14 @@ class="scroll-smooth">
     <button 
     onclick="skip();"
     type="button" 
-    class="absolute bottom-14 lg:bottom-10 right-44 px-6 py-3 text-white">
-    	<img src="./image/skip.svg" style="height:16px;width: 16px;">
+    class="absolute bottom-12 lg:bottom-10 right-32 px-6 py-3 text-white">
+    	<img src="./image/skip.svg" class="w-[4rem] h-[4rem]">
     </button>
 		<button 
 		onclick="muted();" 
 		type="button" 
-		class="absolute bottom-14 lg:bottom-10 right-20 px-6 py-3">
-			<img src="./image/mute.svg" style="height:16px;width: 16px;">
+		class="absolute bottom-16 lg:bottom-14 right-8 px-6 py-3">
+			<img src="./image/mute.svg" class="w-[4rem] h-[2rem]">
 		</button>
 	</div>
 <div 
@@ -126,7 +126,7 @@ class="relative">
 	style="background-image: url(./image/bg-01.png);">
 
 		<div class="relative p-12 w-[24rem] lg:w-[36rem] mx-auto lg:ml-20 flex justify-center items-center">
-			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full"></div>
+			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full shadow-lg shadow-black-500/50  rounded-full"></div>
 			<span id="typed" class="text-white text-left font-MulishRegular text-[20px] lg:text-[22px] z-50"></span>
 		</div>
 		<div 
@@ -135,7 +135,7 @@ class="relative">
 			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
 			</svg>
 			<p 
-			class="text-white">Scroll</p>
+			class="text-white text-[14px] lg:text-[16px]">Scroll</p>
 		</div>
 	</section>
 	<section 
@@ -143,7 +143,7 @@ class="relative">
 	style="background-image: url(./image/bg-02.png);">
 
 		<div class="relative p-12 w-[24rem] lg:w-[36rem] mx-auto lg:mr-12 flex justify-center items-center">
-			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full"></div>
+			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full shadow-lg shadow-black-500/50 rounded-none"></div>
 			<span id="typed02" class="text-white text-left text-[34px] lg:text-[36px] z-50"></span>
 		</div>
 
@@ -153,10 +153,15 @@ class="relative">
 	style="background-image: url(./image/bg-03.png);">
 
 		<div class="relative p-12 w-[24rem] lg:w-[36rem] mx-auto lg:ml-20 flex justify-center items-center">
-			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full"></div>
+			<div class="bg-black bg-opacity-20 absolute inset-0 text-white p-12 w-[24rem] lg:w-[36rem] h-full shadow-lg shadow-black-500/50 rounded-none"></div>
 			<span id="typed03" class="text-white text-left font-MulishRegular text-[20px] lg:text-[22px] z-50"></span>
 		</div>
-
+		<div 
+		class="absolute inset-x-1/2 bottom-20 z-20 flex flex-col items-center justify-center">
+			<span class="intro-banner-vdo-play-btn pinkBg"></span>
+			<p 
+			class="text-white pt-40 flex flex-row w-40 justify-center items-center text-center text-[14px] lg:text-[16px]">FOMO stones</p>
+		</div>
 	</section>
 
 </div>
