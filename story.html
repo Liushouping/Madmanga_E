@@ -290,12 +290,17 @@ id="fullpage">
 </div>
 <script>
 
+
+
+
 	setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
+    // $('#video').pause();
+    // $('#video').play();
   },17000);
 
 	function skip() {
-    clearTimeout();
+    $(".loader-story").remove();
   }
 
 	function muted() {
