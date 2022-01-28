@@ -12,6 +12,7 @@ class="scroll-smooth">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.js" defer ></script>
   <title>story</title>
   <script>
   tailwind.config = {
@@ -34,15 +35,31 @@ class="scroll-smooth">
 <body>
 <div 
 id="fullpage">
-	<div class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-30 overflow-hidden">
-    <video id="video" class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
-<!--     <button 
-    onclick="skip();" 
+	<div 
+	x-data="{ open: false }" 
+	class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-30 overflow-hidden">
+    <video id="video" class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted playsinline="" webkit-playsinline="" x5-playsinline=""></video>
+    <button 
+    @click="skip();"
     type="button" 
-    class="absolute bottom-20 lg:bottom-10 right-44 px-6 py-3 bg-deeporange text-white rounded-lg">Skip</button>
+    class="absolute bottom-20 lg:bottom-10 right-44 px-6 py-3 text-white">
+    	<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+			</svg>
+    </button>
 		<button 
+		@click="muted();open = !open" 
 		type="button" 
-		class="absolute bottom-20 lg:bottom-10 right-20 px-6 py-3 bg-deeporange text-white rounded-lg">Mute</button> -->
+		class="absolute bottom-20 lg:bottom-10 right-20 px-6 py-3 text-white">
+			<svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+			</svg>
+
+			<svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+			</svg>
+		</button>
 	</div>
 	<section 
 	class="relative section bg-cover bg-center" 
@@ -273,9 +290,9 @@ id="fullpage">
 </div>
 <script>
 
-	setTimeout(function(){
+	var timerId = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
-  },10000);
+  },17000);
 
 	$(document).ready(function () {
 		$('#fullpage').fullpage({
@@ -304,14 +321,15 @@ id="fullpage">
 
 	new WOW().init();
 
-	function skip(){
-    document.getElementById('video').play();
-		document.getElementById('video').pause();
-		document.getElementById('video').currentTime = video.duration;
-   }
-	// function muted(){
- //    document.getElementById("#video").muted = true;
- //  }
+	function skip() {
+		alert('11');
+    window.clearTimeout(timerId);
+  }
+
+	function muted() {
+	  var video = document.getElementById("video");
+	  video.muted = !video.muted;
+	}
 </script>
 </body>
 </html>
