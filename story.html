@@ -41,13 +41,12 @@ class="scroll-smooth">
 <div 
 id="fullpage">
 	<div class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-30 ">
-    <video class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted></video>
+    <video id="video" class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted></video>
     <button 
-    id="skip" 
+    onclick="skip();" 
     type="button" 
     class="absolute bottom-10 right-44 px-6 py-3 bg-deeporange text-white rounded-lg">Skip</button>
 		<button 
-		id="muted" 
 		type="button" 
 		class="absolute bottom-10 right-20 px-6 py-3 bg-deeporange text-white rounded-lg">Mute</button>
 	</div>
@@ -310,13 +309,13 @@ id="fullpage">
 	});
 
 	new WOW().init();
-	// function play(){
- //        document.getElementById('audio').pause();
+
+	// function skip(){
+ //    document.getElementById('video').stop();
  //   }
-	// function muted(){
- //    var vid = document.getElementById("muted");
-	// 	vid.muted = true;
- //  }
+	function muted(){
+    document.getElementById("#video").muted = true;
+  }
 </script>
 </body>
 </html>
