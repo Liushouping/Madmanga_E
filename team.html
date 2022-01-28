@@ -196,7 +196,7 @@ class="scroll-smooth">
 		      </div>
 		    </div>
 		    <div 
-				class="swiper mySwiper1 pb-3">
+				class="swiper mySwiper2 pb-3">
 		      <div class="swiper-wrapper">
 		        <div class="swiper-slide">
 		        	<div class="flex justify-center items-center flex-col text-[14px] lg:text-[16px]">
@@ -345,8 +345,8 @@ class="scroll-smooth">
         speed:1500,
         freeMode:true,
         autoplay: {
-          delay: false,
-          disableOnInteraction: false,
+          delay: 0,
+	        reverseDirection: false,
         },
         pagination: {
           el: ".swiper-pagination",
@@ -366,13 +366,12 @@ class="scroll-smooth">
       });
 		var swiper2 = new Swiper(".mySwiper2", {
         sslidesPerView: 3,
-        spaceBetween: 0,
         loop: true,
         speed:1500,
         freeMode:true,
         autoplay: {
-          delay: false,
-          disableOnInteraction: false,
+          delay: 0,
+	        reverseDirection: true,
         },
         pagination: {
           el: ".swiper-pagination",
