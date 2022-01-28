@@ -14,17 +14,11 @@ class="scroll-smooth">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
   <title>story</title>
   <script>
-    tailwind.config = {
+  tailwind.config = {
       theme: {
         extend: {
           colors: {
             deeporange: '#FD6D03',
-            offwhite: '#E8E9D4',
-          },
-          scale: {
-          	200: '2',
-          	250: '2.5',
-          	300: '3'
           }
       },
       fontFamily: {
@@ -40,15 +34,15 @@ class="scroll-smooth">
 <body>
 <div 
 id="fullpage">
-	<div class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-30 ">
+	<div class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-30 overflow-hidden">
     <video id="video" class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted preload="auto" loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
-    <button 
+<!--     <button 
     onclick="skip();" 
     type="button" 
     class="absolute bottom-20 lg:bottom-10 right-44 px-6 py-3 bg-deeporange text-white rounded-lg">Skip</button>
 		<button 
 		type="button" 
-		class="absolute bottom-20 lg:bottom-10 right-20 px-6 py-3 bg-deeporange text-white rounded-lg">Mute</button>
+		class="absolute bottom-20 lg:bottom-10 right-20 px-6 py-3 bg-deeporange text-white rounded-lg">Mute</button> -->
 	</div>
 	<section 
 	class="relative section bg-cover bg-center" 
