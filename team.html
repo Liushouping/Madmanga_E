@@ -6,7 +6,7 @@ class="scroll-smooth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./index.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>team</title>
   <script>
@@ -196,7 +196,7 @@ class="scroll-smooth">
 		      </div>
 		    </div>
 		    <div 
-		    class="swiper mySwiper2 pb-3">
+				class="swiper mySwiper1 pb-3">
 		      <div class="swiper-wrapper">
 		        <div class="swiper-slide">
 		        	<div class="flex justify-center items-center flex-col text-[14px] lg:text-[16px]">
@@ -341,9 +341,9 @@ class="scroll-smooth">
 	<script>
 		var swiper = new Swiper(".mySwiper1", {
         slidesPerView: 3,
-        spaceBetween: 5,
         loop: true,
-        speed: 800,
+        speed:1500,
+        freeMode:true,
         autoplay: {
           delay: false,
           disableOnInteraction: false,
@@ -355,23 +355,21 @@ class="scroll-smooth">
         breakpoints: {
           640: {
             slidesPerView: 2,
-            spaceBetween: 5,
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 8,
-            spaceBetween: 10,
           },
         },
       });
-		var swiper = new Swiper(".mySwiper2", {
-        slidesPerView: 3,
-        spaceBetween: 5,
+		var swiper2 = new Swiper(".mySwiper2", {
+        sslidesPerView: 3,
+        spaceBetween: 0,
         loop: true,
-        speed: 800,
+        speed:1500,
+        freeMode:true,
         autoplay: {
           delay: false,
           disableOnInteraction: false,
@@ -383,15 +381,12 @@ class="scroll-smooth">
         breakpoints: {
           640: {
             slidesPerView: 2,
-            spaceBetween: 5,
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 5,
           },
           1024: {
             slidesPerView: 8,
-            spaceBetween: 5,
           },
         },
       });
