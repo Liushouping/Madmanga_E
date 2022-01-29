@@ -47,7 +47,7 @@ class="scroll-smooth">
 <body 
 x-data="{ isOpen: false }">
 <div class="absolute top-0 right-0 opacity-30 z-50 text-white text-xs">
-	測試版本-A003 (測試版顯示) 已修正破蛋
+	測試版本-A003 (測試版顯示)
 </div>
 	<!-- 導覽列 -->
 	<section 
@@ -120,7 +120,7 @@ x-data="{ isOpen: false }">
 	class="loader-story absolute inset-0 w-screen h-screen bg-black flex justify-center items-center z-50 overflow-hidden">
     <video id="video" class="w-screen" src="./video/mad.mp4" type="video/mp4" autoplay muted playsinline="" webkit-playsinline="" x5-playsinline=""></video>
     <button 
-    @click="skip();typed();"
+    @click="skip();"
     type="button" 
     class="absolute bottom-28 lg:bottom-10 right-32 px-6 py-3 text-white">
     	<img src="./image/skip.svg" class="w-[4rem] h-[4rem]">
@@ -256,7 +256,6 @@ class="relative">
 
 	setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
-    typed();
   },17000);
 
 	function skip() {
@@ -277,25 +276,25 @@ class="relative">
 		});
 	});
 
-		new Typed('#typed',{
-		  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-		  typeSpeed : 50,
-		  loop : false,
-		  loopCount: 0,
-		  fadeOut: true,
-		});
-		new Typed('#typed02',{
-		  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
-		new Typed('#typed03',{
-		  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
+	new Typed('#typed',{
+	  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
+		typeSpeed : 50,
+		loop : false,
+		loopCount: 0,
+		fadeOut: true,
+	});
+	new Typed('#typed02',{
+	  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
+	  typeSpeed : 50,
+	  loop : false,
+	  fadeOut: true,
+	});
+	new Typed('#typed03',{
+	  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
+	  typeSpeed : 50,
+	  loop : false,
+	  fadeOut: true,
+	});
 
 	new WOW().init();
 
