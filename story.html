@@ -124,20 +124,7 @@ x-data="{ isOpen: false }">
 		type="button" 
 		class="absolute bottom-16 lg:bottom-14 right-8 px-6 py-3">
 			<img x-show="!open" src="./image/mute.svg" class="w-[4rem] h-[2rem]">
-			<img x-show="open" src="./image/mute.svg" class="w-[4rem] h-[2rem]">
-		</button>
-		<button 
-    @click="skip();"
-    type="button" 
-    class="absolute bottom-12 lg:bottom-10 left-32 px-6 py-3 text-white">
-    	<img src="./image/skip.svg" class="w-[16px] h-[16px]">
-    </button>
-		<button 
-		@click="muted();open = !open;" 
-		type="button" 
-		class="absolute bottom-16 lg:bottom-14 left-8 px-6 py-3">
-			<img x-show="!open" src="./image/mute.svg" class="w-[16px] h-[16px]">
-			<img x-show="open" src="./image/mute.svg" class="w-[16px] h-[16px]">
+			<img x-show="open" src="./image/sound.svg" class="w-[4rem] h-[2rem]">
 		</button>
 	</div>
 <div 
