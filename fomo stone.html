@@ -11,6 +11,10 @@ class="scroll-smooth">
   <script>
   tailwind.config = {
       theme: {
+      	screens: {
+		      'se': '375px',
+		      '12pro': '390px',
+		    },
         extend: {
           colors: {
             deeporange: '#FD6D03',
@@ -164,7 +168,7 @@ x-data="{ isOpen: false }">
 
 		<!-- 中心標誌 -->
 		<div 
-		class="absolute inset-x-0 inset-y-1/5 md:inset-y-1/4 lg:inset-y-1/4 z-20 mx-auto w-[20rem] lg:w-[16rem]">
+		class="absolute inset-x-0 inset-y-1/5 12pro:inset-y-1/4 md:inset-y-1/4 lg:inset-y-1/4 z-20 mx-auto w-[20rem] lg:w-[16rem]">
 			<img src="./image/1228-egg.gif" 
 			class="mx-auto w-[20rem] lg:w-[16rem] scale-150 lg:scale-50" 
 			style="animation: switch 1463ms linear 238ms infinite alternate;">
