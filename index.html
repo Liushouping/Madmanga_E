@@ -171,10 +171,10 @@ x-data="{ isOpen: false }">
 		<section 
 		class="absolute inset-0 flex justify-center items-center">
 			<video 
-			class="hidden lg:block" 
+			class="hidden lg:block scale-150 px-2" 
 			src="./video/2.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
 			<video 
-			class="lg:hidden block"  
+			class="lg:hidden block scale-150 px-2"  
 			src="./video/m-02.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
 		</section>
 
@@ -186,6 +186,12 @@ x-data="{ isOpen: false }">
 				<span class="ripple pinkBg"></span>
 				<span class="ripple pinkBg"></span>
 			</a>
+		</div>
+
+		<!-- 右下標誌 -->
+		<div
+		class="absolute bottom-16 md:bottom-20 right-0 md:right-5 hidden lg:flex">
+			<img src="./image/orange-logo.png" class="scale-50 lg:scale-100">
 		</div>
 
 		<div 
