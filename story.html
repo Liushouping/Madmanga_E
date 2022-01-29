@@ -47,7 +47,7 @@ class="scroll-smooth">
 <body 
 x-data="{ isOpen: false }">
 <div class="absolute top-0 right-0 opacity-30 z-50 text-white text-xs">
-	測試版本-A004 (測試版顯示)
+	測試版本-A005 (測試版顯示)
 </div>
 	<!-- 導覽列 -->
 	<section 
@@ -260,6 +260,9 @@ class="relative">
 
 	function skip() {
     $(".loader-story").remove();
+    tyed01.reset();
+    tyed02.reset();
+    tyed03.reset();
   }
 
 	function muted() {
@@ -275,27 +278,24 @@ class="relative">
 			paddingBottom: '120px',
 		});
 	});
-
-	new Typed('#typed',{
-	  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-		typeSpeed : 50,
-		loop : false,
-		loopCount: 0,
-		fadeOut: true,
-	});
-	new Typed('#typed02',{
-	  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-	  typeSpeed : 50,
-	  loop : false,
-	  fadeOut: true,
-	});
-	new Typed('#typed03',{
-	  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-	  typeSpeed : 50,
-	  loop : false,
-	  fadeOut: true,
-	});
-
+		var tyed01 = new Typed('#typed',{
+		  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
+			typeSpeed : 50,
+			loop : false,
+			fadeOut: true,
+		});
+		var tyed02 = new Typed('#typed02',{
+		  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
+		  typeSpeed : 50,
+		  loop : false,
+		  fadeOut: true,
+		});
+		var tyed03 = new Typed('#typed03',{
+		  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
+		  typeSpeed : 50,
+		  loop : false,
+		  fadeOut: true,
+		});
 	new WOW().init();
 
 </script>
