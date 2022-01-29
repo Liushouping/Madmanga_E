@@ -13,6 +13,13 @@ class="scroll-smooth">
   <script>
   tailwind.config = {
       theme: {
+      	screens: {
+		      'se': '375px',
+		      '12pro': '390px',
+		      'sm': '640px',
+		      'md': '768px',
+		      'lg': '1024px',
+		    },
         extend: {
           colors: {
             deeporange: '#FD6D03',
@@ -453,7 +460,7 @@ x-data="{ isOpen: false }">
 		var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 3,
         loop: true,
-        speed:5000,
+        speed:7000,
         freeMode:true,
         autoplay: {
           delay: 0,
