@@ -209,6 +209,7 @@ class="relative">
 		</div>
 		
 	<section 
+	data-anchor="firstpage" 
 	class="relative section bg-cover bg-center fp-height-auto" 
 	style="background-image: url(./image/bg-01.png);">
 
@@ -226,6 +227,7 @@ class="relative">
 		</div>
 	</section>
 	<section 
+	data-anchor="secondPage" 
 	class="relative section bg-cover bg-center fp-height-auto" 
 	style="background-image: url(./image/bg-02.png);">
 
@@ -243,6 +245,7 @@ class="relative">
 		</div>
 	</section>
 	<section 
+	data-anchor="3rdPage" 
 	class="relative section bg-cover bg-center fp-height-auto" 
 	style="background-image: url(./image/bg-03.png);">
 
@@ -325,11 +328,23 @@ class="relative">
 	$(document).ready(function () {
 		$('#fullpage').fullpage({
 			scrollingSpeed : 1000,
+			anchors:['firstPage', 'secondPage', '3rdPage'],
 			menu: '.header, .footer, .logo',
 			paddingTop: '50px',
 			paddingBottom: '120px',
+			v2compatible: false,
+		  afterRender: function(origin,index,anchorLink) {
+		    if(origin.index == 2){
+							alert("第3个section停止加载");
+				}
+				if(origin.anchor == '3rdPage'){
+							alert("第3个section停止加载");
+				}
+		  },
+
 		});
 	});
+
 
 </script>
 </body>
