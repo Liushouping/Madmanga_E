@@ -332,12 +332,12 @@ class="relative">
 			menu: '.header, .footer, .logo',
 			paddingTop: '50px',
 			paddingBottom: '120px',
-			v2compatible: false,
+
 		  afterRender: function(origin,index,anchorLink) {
-		    if(origin.index == 2){
+		    if(origin.index == 1){
 							alert("第3个section停止加载");
 				}
-				if(origin.anchor == '3rdPage'){
+				if(anchor == '3rdPage'){
 							alert("第3个section停止加载");
 				}
 		  },
