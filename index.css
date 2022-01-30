@@ -78,8 +78,8 @@
 }
 .intro-banner-vdo-play-btn .ripple{
     position:absolute;
-    width:60px;
-    height:60px;
+/*    width:60px;
+    height:60px;*/
     z-index:-1;
     left:50%;
     top:50%;
