@@ -43,9 +43,9 @@ class="scroll-smooth">
 <body 
 x-data="{ isOpen: false }">
 <div class="absolute top-0 right-0 opacity-30 z-50 text-white text-xs">
-	測試版本-A005 (測試版顯示)
+	測試版本-A006 (測試版顯示)
 </div>
-	<!-- 導覽列 -->
+	
 	<section 
 	:class="isOpen ? 'fixed top-0 z-50' : 'hidden'" 
 	class="w-screen h-screen bg-deeporange">
@@ -97,7 +97,7 @@ x-data="{ isOpen: false }">
 				</li>
 			</ul>
 		</div>
-		<!-- 選單 -->
+		
 		<div 
 		class="absolute right-5 top-5 z-30">
 				<button 
@@ -108,16 +108,16 @@ x-data="{ isOpen: false }">
 					</svg>
 				</button>
 		</div>
-		<!-- 選單 -->
+		
 	</section>
-	<!-- 導覽列 -->
+	
 	<section 
 	class="relative w-screen h-screen bg-cover bg-center overflow-hidden" style="background-image:url(./image/banner-02.png);">
 		<header>
 			<nav 
 			class="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-6 px-4">
 				<ul 
-				class="hidden lg:flex flex-row space-x-6 md:space-x-16">
+				class="hidden lg:flex flex-row space-x-6 md:space-x-16 ml-[30px]">
 					<li class="text-white hover:text-deeporange text-[14px]">
 						<a href="index.html" class="appearance-none">HOME</a>
 					</li>
@@ -162,50 +162,49 @@ x-data="{ isOpen: false }">
 			</nav>
 		</header>
 
-		<!-- 中心標誌 -->
 		<div 
-		class="absolute inset-x-0 bottom-72 md:bottom-36 lg:bottom-64 z-30 mx-auto w-[20rem] h-[22rem] lg:w-[16rem] lg:h-[16rem] flex items-end">
-<!-- 		<div 
-		class="absolute inset-x-0 inset-y-1/5 12pro:inset-y-1/4 md:inset-y-1/5 lg:inset-y-1/4 z-20 mx-auto w-[20rem] lg:w-[16rem]"> -->
+		class="absolute inset-x-0 bottom-80 md:bottom-36 lg:bottom-72 z-30 mx-auto w-[20rem] h-[22rem] lg:w-[16rem] lg:h-[16rem] flex items-end">
 			<img src="./image/1228-egg.gif" 
-			class="mx-auto w-[18rem] lg:w-[16rem] scale-125 lg:scale-50 z-40" 
+			class="mx-auto w-[15rem] lg:w-[17rem] scale-125 lg:scale-50 z-40" 
 			style="animation: switch 1463ms linear 238ms infinite alternate;">
 		</div>
 
-		<div class="absolute inset-x-0 bottom-36 md:bottom-96 lg:bottom-24 z-40">
+		<div class="absolute inset-x-0 bottom-40 md:bottom-96 lg:bottom-28 z-40">
 			<p class="text-white text-center font-XtreemFatDemo text-[32px] lg:text-[36px] py-4">About to be born...</p>
 			<ul 
 			class="flex flex-row space-x-4 lg:space-x-12 justify-center items-center">
 				<li 
 				class="flex flex-col justify-center items-center">
 					<span class="text-deeporange text-[36px] font-XtreemFatDemo">???</span>
-					<span class="text-white text-[14px] lg:text-[16px]">DAYS</span>
+					<span class="text-white text-[14px] lg:text-[16px] font-bold italic">DAYS</span>
 				</li>
 				<li 
 				class="flex flex-col justify-center items-center">
 					<span class="text-deeporange text-[36px] font-XtreemFatDemo">??</span>
-					<span class="text-white text-[14px] lg:text-[16px]">HOURS</span>
+					<span class="text-white text-[14px] lg:text-[16px] font-bold italic">HOURS</span>
 				</li>
 				<li 
 				class="flex flex-col justify-center items-center">
 					<span class="text-deeporange text-[36px] font-XtreemFatDemo">??</span>
-					<span class="text-white text-[14px] lg:text-[16px]">MINUTES</span>
+					<span class="text-white text-[14px] lg:text-[16px] font-bold italic">MINUTES</span>
 				</li>
 				<li 
 				class="flex flex-col justify-center items-center">
 					<span class="text-deeporange text-[36px] font-XtreemFatDemo">??</span>
-					<span class="text-white text-[14px] lg:text-[16px]">SECONDS</span>
+					<span class="text-white text-[14px] lg:text-[16px] font-bold italic">SECONDS</span>
 				</li>
 			</ul>
 		</div>
 
 		<div 
-		class="absolute inset-x-1/2 lg:inset-x-3/4 bottom-20 md:bottom-80 lg:bottom-44 z-40">
-			<a href="team.html" class="intro-banner-vdo-play-btn pinkBg appearance-none w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]">
+		class="absolute inset-x-1/3 lg:inset-x-1/2 bottom-24 lg:bottom-20 ml-12 lg:ml-6 z-20 flex flex-col items-center justify-center">
+			<a href="team.html" class="intro-banner-vdo-play-btn pinkBg appearance-none w-[5px] h-[5px] lg:w-[15px] lg:h-[15px] appearance-none flex justify-center items-center flex-col">
 				<i class="glyphicon glyphicon-play whiteText" aria-hidden="true"></i>
 				<span class="ripple pinkBg"></span>
 				<span class="ripple pinkBg"></span>
 				<span class="ripple pinkBg"></span>
+				<p 
+				class="text-white pt-20 lg:pt-20 flex flex-row w-40 justify-center items-center text-center text-[14px] lg:text-[16px]">FOMO stones</p>
 			</a>
 		</div>
 		<!--  -->
@@ -225,12 +224,12 @@ x-data="{ isOpen: false }">
 		class="absolute top-16 md:bottom-20 left-36">
 			<img src="./image/t-01.png" style="animation: switch 1463ms linear 238ms infinite alternate">
 		</div>
-		<!-- 右下標誌 -->
+		
 		<div
-		class="absolute bottom-16 md:bottom-20 right-0 md:right-5">
-			<img src="./image/orange-logo.png" class="scale-50 lg:scale-100">
+		class="logo fixed bottom-[40rem] se:bottom-[34rem] md:bottom-20 right-[12rem] md:right-5">
+			<img src="./image/orange-logo.png" style="max-width: 90%;">
 		</div>
-		<!-- footer -->
+		
 		<div 
 		class="absolute bottom-0 bg-deeporange py-8px w-full rounded-tl-full">
 			<ul class="flex justify-between items-center flex-col md:flex-row px-10 text-white text-[12px] lg:text-[14px] tracking-onepx">

@@ -44,9 +44,9 @@ class="scroll-smooth">
 <body 
 x-data="{ isOpen: false }">
 <div class="absolute top-0 right-0 opacity-30 z-50 text-white text-xs">
-	測試版本-A005 (測試版顯示)
+	測試版本-A006 (測試版顯示)
 </div>
-	<!-- 導覽列 -->
+	
 	<section 
 	:class="isOpen ? 'fixed top-0 z-50' : 'hidden'" 
 	class="w-screen h-screen bg-deeporange">
@@ -98,7 +98,7 @@ x-data="{ isOpen: false }">
 				</li>
 			</ul>
 		</div>
-		<!-- 選單 -->
+		
 		<div 
 		class="absolute right-5 top-5 z-30">
 				<button 
@@ -109,9 +109,9 @@ x-data="{ isOpen: false }">
 					</svg>
 				</button>
 		</div>
-		<!-- 選單 -->
+		
 	</section>
-	<!-- 導覽列 -->
+	
 	<div 
 	class="loader-home absolute inset-0 w-screen h-screen fixed bg-black flex justify-center items-center z-50">
      <video class="hidden lg:block" src="./video/1.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
@@ -124,7 +124,7 @@ x-data="{ isOpen: false }">
 			<nav 
 			class="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-6 px-4">
 				<ul 
-				class="hidden lg:flex flex-row space-x-6 md:space-x-16">
+				class="hidden lg:flex flex-row space-x-6 md:space-x-16 ml-[30px]">
 					<li class="text-deeporange hover:text-deeporange text-[14px]">
 						<a href="index.html" class="appearance-none">HOME</a>
 					</li>
@@ -181,7 +181,7 @@ x-data="{ isOpen: false }">
 
 		<div 
 		class="absolute inset-x-3/4 lg:inset-x-2/3 bottom-40 md:bottom-80 lg:bottom-44">
-			<a href="story.html" class="intro-banner-vdo-play-btn pinkBg appearance-none w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]">
+			<a href="story.html" class="appearance-none intro-banner-vdo-play-btn pinkBg w-[5px] h-[5px] lg:w-[15px] lg:h-[15px]">
 				<i class="glyphicon glyphicon-play whiteText" aria-hidden="true"></i>
 				<span class="ripple pinkBg"></span>
 				<span class="ripple pinkBg"></span>
@@ -189,7 +189,6 @@ x-data="{ isOpen: false }">
 			</a>
 		</div>
 
-		<!-- 右下標誌 -->
 		<div
 		class="absolute bottom-16 md:bottom-20 right-0 md:right-5 hidden lg:flex">
 			<img src="./image/orange-logo.png" class="scale-50 lg:scale-100">
