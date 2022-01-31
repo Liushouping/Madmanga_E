@@ -204,7 +204,7 @@ class="relative">
 		<div class="fixed bottom-0 lg:-bottom-6 righ-5 lg:right-20">
 				<img src="./image/ft-logo-02.png" class="w-full">
 		</div>
-		
+
 	<section 
 	data-anchor="firstpage" 
 	class="relative section bg-cover bg-center fp-height-auto" 
@@ -265,6 +265,27 @@ class="relative">
 
 </div>
 <script>
+	let typedOne = new Typed('#typed',{
+	  strings: ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
+		typeSpeed: 50,
+		loop: false,
+		fadeOut: true,
+	});
+	typedOne.stop();
+	let typedTwo = new Typed('#typed02',{
+	  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
+	  typeSpeed : 50,
+	  loop : false,
+	  fadeOut: true,
+	});
+	typedTwo.stop();
+	let typedThree = new Typed('#typed03',{
+	  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
+	  typeSpeed : 50,
+	  loop : false,
+	  fadeOut: true,
+	});
+	typedThree.stop();
 
 	var t = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
@@ -281,6 +302,7 @@ class="relative">
 	  video.muted = !video.muted;
 	}
 
+
 	$(document).ready(function () {
 		$('#fullpage').fullpage({
 			scrollingSpeed : 1000,
@@ -290,51 +312,54 @@ class="relative">
 			paddingBottom: '120px',
 
 		  afterLoad: function(anchorLink, index){
-		  	if(index == 1){
-		  		console.log(typed,'執行第1段打字');
-				    new Typed('#typed',{
-						  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-							typeSpeed : 50,
-							loop : false,
-							fadeOut: true,
-						});
+		  	console.log({
+		  		typedOne,
+		  		typedTwo,
+		  		typedThree
+		  	})
+
+
+		  	if (index == 1) {
+		  		typedOne.start();
+		  		typedOne.reset();
+		  		typedTwo.stop();
+		  		typedThree.stop();
+
 					console.log(typed,'執行第一段打字');
         }
 		  	if(index == 2){
-	        	new Typed('#typed02',{
-						  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-						  typeSpeed : 50,
-						  loop : false,
-						  fadeOut: true,
-						});
+
+		  		typedOne.stop();
+		  		typedTwo.start();
+		  		typedOne.reset();
+		  		typedThree.stop();
 
 					console.log('執行第二段打字');
         }
         if(index == 3){
-	        	new Typed('#typed03',{
-						  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-						  typeSpeed : 50,
-						  loop : false,
-						  fadeOut: true,
-						});
+		  		typedOne.stop();
+		  		typedTwo.stop();
+		  		typedThree.start();
+		  		typedOne.reset();
 
 					console.log('執行第三段打字');
         }
       },
-     //  onLeave: function(anchorLink, index) {
-     //  	if(index == 1){
-     //  		typed.stop();
-					// console.log('執行第一段打字');
-     //    }
-		  	// if(index == 2){
-		  	// 	typed.stop();
-					// console.log('執行第二段打字');
-     //    }
-     //    if(index == 3){
-     //    	typed.stop();
-					// console.log('執行第三段打字');
-     //    }
-     //  }
+
+      onLeave: function(anchorLink, index) {
+     		if(index == 1){
+     			typedOne.start();
+					console.log('離開執行第一段打字');
+     	  }
+		  	if(index == 2){
+		  		typedTwo.start();
+					// console.log('離開執行第二段打字');
+     	  }
+     	  if(index == 3){
+     	  	typedThree.start();
+					// console.log('離開執行第三段打字');
+     	  }
+      }
 
 		});
 	});
