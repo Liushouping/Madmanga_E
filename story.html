@@ -289,12 +289,10 @@ class="relative">
 
 	var t = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
-    console.log('執行定時函數');
   },17000);
 
 	function skip() {
     $(".loader-story").remove();
-		console.log('執行跳過事件');
   }
 
 	function muted() {
@@ -324,40 +322,30 @@ class="relative">
 		  		typedOne.reset();
 		  		typedTwo.stop();
 		  		typedThree.stop();
-
-					console.log(typed,'執行第一段打字');
         }
 		  	if(index == 2){
-
 		  		typedOne.stop();
 		  		typedTwo.start();
 		  		typedOne.reset();
 		  		typedThree.stop();
-
-					console.log('執行第二段打字');
         }
         if(index == 3){
 		  		typedOne.stop();
 		  		typedTwo.stop();
 		  		typedThree.start();
 		  		typedOne.reset();
-
-					console.log('執行第三段打字');
         }
       },
 
       onLeave: function(anchorLink, index) {
      		if(index == 1){
      			typedOne.start();
-					console.log('離開執行第一段打字');
      	  }
 		  	if(index == 2){
 		  		typedTwo.start();
-					// console.log('離開執行第二段打字');
      	  }
      	  if(index == 3){
      	  	typedThree.start();
-					// console.log('離開執行第三段打字');
      	  }
       }
 
