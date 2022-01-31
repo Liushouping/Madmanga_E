@@ -271,53 +271,12 @@ class="relative">
 
 	var t = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
-    var tyed01 = new Typed('#typed',{
-		  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-			typeSpeed : 50,
-			loop : false,
-			fadeOut: true,
-		});
-		var tyed02 = new Typed('#typed02',{
-		  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
-		var tyed03 = new Typed('#typed03',{
-		  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
-    tyed01.start();
-    tyed02.start();
-    tyed03.start();
-
-    console.log('setTimeout01');
+    console.log('執行定時函數');
   },17000);
 
 	function skip() {
     $(".loader-story").remove();
-    var tyed01 = new Typed('#typed',{
-		  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-			typeSpeed : 50,
-			loop : false,
-			fadeOut: true,
-		});
-		var tyed02 = new Typed('#typed02',{
-		  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
-		var tyed03 = new Typed('#typed03',{
-		  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-		  typeSpeed : 50,
-		  loop : false,
-		  fadeOut: true,
-		});
-
-		clearTimeout(t);
+		console.log('執行跳過事件');
   }
 
 	function muted() {
@@ -333,14 +292,58 @@ class="relative">
 			paddingTop: '50px',
 			paddingBottom: '120px',
 
-		  afterRender: function(origin,index,anchorLink) {
-		    if(origin.index == 1){
-							alert("第3个section停止加载");
-				}
-				if(anchor == '3rdPage'){
-							alert("第3个section停止加载");
-				}
-		  },
+		  afterLoad: function(anchorLink, index){
+		  	if(index == 1){
+
+				    new Typed('#typed',{
+						  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
+							typeSpeed : 50,
+							loop : false,
+							fadeOut: true,
+						});
+
+
+					console.log('執行第一段打字');
+        }
+		  	if(index == 2){
+
+
+	        	new Typed('#typed02',{
+						  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
+						  typeSpeed : 50,
+						  loop : false,
+						  fadeOut: true,
+						});
+
+					console.log('執行第二段打字');
+        }
+        if(index == 3){
+
+	        	new Typed('#typed03',{
+						  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
+						  typeSpeed : 50,
+						  loop : false,
+						  fadeOut: true,
+						});
+
+					console.log('執行第三段打字');
+        }
+      },
+     //  onLeave: function(anchorLink, index) {
+     //  	if(index == 1){
+					// console.log('執行第一段打字');
+     //    }
+		  	// if(index == 2){
+
+
+					// console.log('執行第二段打字');
+     //    }
+     //    if(index == 3){
+
+
+					// console.log('執行第三段打字');
+     //    }
+     //  }
 
 		});
 	});
