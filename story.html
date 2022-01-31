@@ -46,10 +46,6 @@ class="scroll-smooth">
 </head>
 <body 
 x-data="{ isOpen: false }">
-<div class="absolute top-0 right-0 opacity-30 z-50 text-white text-xs">
-	測試版本-A017 (測試版顯示)
-</div>
-	
 	<section 
 	:class="isOpen ? 'fixed top-0 z-50' : 'hidden'" 
 	class="w-screen h-screen bg-deeporange">
@@ -294,6 +290,7 @@ class="relative">
 
 		  afterLoad: function(anchorLink, index){
 		  	if(index == 1){
+		  		console.log(typed,'執行第1段打字');
 				    new Typed('#typed',{
 						  strings : ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br> Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
 							typeSpeed : 50,
@@ -303,8 +300,6 @@ class="relative">
 					console.log(typed,'執行第一段打字');
         }
 		  	if(index == 2){
-
-
 	        	new Typed('#typed02',{
 						  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
 						  typeSpeed : 50,
@@ -315,7 +310,6 @@ class="relative">
 					console.log('執行第二段打字');
         }
         if(index == 3){
-
 	        	new Typed('#typed03',{
 						  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
 						  typeSpeed : 50,
@@ -328,16 +322,15 @@ class="relative">
       },
      //  onLeave: function(anchorLink, index) {
      //  	if(index == 1){
+     //  		typed.stop();
 					// console.log('執行第一段打字');
      //    }
 		  	// if(index == 2){
-
-
+		  	// 	typed.stop();
 					// console.log('執行第二段打字');
      //    }
      //    if(index == 3){
-
-
+     //    	typed.stop();
 					// console.log('執行第三段打字');
      //    }
      //  }
