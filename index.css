@@ -91,6 +91,21 @@
     animation:ripple 1.8s infinite
 }
 
+.intro-banner-vdo-play-btn .ripple-index{
+    position:absolute;
+    width:30px;
+    height:30px;
+    z-index:-1;
+    left:50%;
+    top:50%;
+    opacity:0;
+    margin: -15px 0 0 -15px;
+    border-radius:100px;
+
+    -webkit-animation:ripple 1.8s infinite;
+    animation:ripple 1.8s infinite
+}
+
 @-webkit-keyframes ripple{
     0%{
         opacity:1;

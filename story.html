@@ -183,8 +183,12 @@ class="relative">
 			</nav>
 		</header>
 		
-		<div
+<!-- 		<div
 		class="logo fixed top-[2rem] right-[14rem] se:right-[14rem] 12pro:right-[15rem] md:hidden flex">
+			<img src="./image/orange-logo.png" style="max-width: 90%;margin: 0 auto;">
+		</div> -->
+		<div
+		class="logo fixed top-5 left-5 md:hidden flex">
 			<img src="./image/orange-logo.png" style="max-width: 90%;margin: 0 auto;">
 		</div>
 
@@ -267,27 +271,27 @@ class="relative">
 <script>
 	let typedOne = new Typed('#typed',{
 	  strings: ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br>Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
-		typeSpeed: 50,
+		typeSpeed: 70,
 		loop: false,
 		fadeOut: true,
 	});
 	typedOne.stop();
 	let typedTwo = new Typed('#typed02',{
 	  strings : ['WAIT.<br><br>WHAT...IS...THAT?! '],
-	  typeSpeed : 50,
+	  typeSpeed : 70,
 	  loop : false,
 	  fadeOut: true,
 	});
 	typedTwo.stop();
 	let typedThree = new Typed('#typed03',{
 	  strings : ['The energy, on its way to the black hole, was captured by a flaming planet, followed by FOMO stones emerging from the surface of the star one after another.<br><br>Is it the birth of an evil conspiracy? Or a new adventure about to unfold?'],
-	  typeSpeed : 50,
+	  typeSpeed : 70,
 	  loop : false,
 	  fadeOut: true,
 	});
 	typedThree.stop();
 
-	var t = setTimeout(function(){
+	const t = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
   },17000);
 
@@ -296,7 +300,7 @@ class="relative">
   }
 
 	function muted() {
-	  var video = document.getElementById("video");
+	  const video = document.getElementById("video");
 	  video.muted = !video.muted;
 	}
 
@@ -315,7 +319,6 @@ class="relative">
 		  		typedTwo,
 		  		typedThree
 		  	})
-
 
 		  	if (index == 1) {
 		  		typedOne.start();

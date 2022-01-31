@@ -419,18 +419,15 @@ x-data="{ isOpen: false }">
 	</section>
 
 	<script>
-		var swiper = new Swiper(".mySwiper1", {
+		const swiper = new Swiper(".mySwiper1", {
         slidesPerView: 3,
         loop: true,
         speed:5000,
+        allowTouchMove: false,
         freeMode:true,
         autoplay: {
           delay: 0,
 	        reverseDirection: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: false,
         },
         breakpoints: {
           640: {
@@ -444,18 +441,15 @@ x-data="{ isOpen: false }">
           },
         },
       });
-		var swiper2 = new Swiper(".mySwiper2", {
+		const swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 3,
         loop: true,
         speed:7000,
+        allowTouchMove: false,
         freeMode:true,
         autoplay: {
           delay: 0,
 	        reverseDirection: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: false,
         },
         breakpoints: {
           640: {
