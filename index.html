@@ -44,6 +44,11 @@
 </head>
 <body 
 x-data="{ isOpen: false }">
+	<div 
+	class="loader-home absolute inset-0 w-screen h-screen fixed bg-black flex justify-center items-center z-50">
+     <video class="hidden lg:block" src="./video/1.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
+     <video class="lg:hidden block" src="./video/m-01.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
+	</div>
 	<section 
 	:class="isOpen ? 'fixed top-0 z-50' : 'hidden'" 
 	class="w-screen h-screen bg-deeporange">
@@ -108,12 +113,6 @@ x-data="{ isOpen: false }">
 		</div>
 		
 	</section>
-	
-	<div 
-	class="loader-home absolute inset-0 w-screen h-screen fixed bg-black flex justify-center items-center z-50">
-     <video class="hidden lg:block" src="./video/1.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
-     <video class="lg:hidden block" src="./video/m-01.mp4" type="video/mp4" autoplay muted loop="" playsinline="" webkit-playsinline="" x5-playsinline=""></video>
-	</div>
 
 	<section 
 	class="relative w-screen h-screen bg-black overflow-hidden">
