@@ -36,7 +36,11 @@
     }
   }
   </script>
-
+<script>
+		setTimeout(function(){
+        $('.loader-home').fadeToggle("slow","linear");
+    },1300);
+</script>
 </head>
 <body 
 x-data="{ isOpen: false }">
@@ -200,12 +204,6 @@ x-data="{ isOpen: false }">
 				<img src="./image/ft-logo-02.png" class="w-full">
 		</div>
 	</section>
-
-	<script>
-		setTimeout(function(){
-        $('.loader-home').fadeToggle("slow","linear");
-    },1500);
-	</script>
 	<script src="./js/jquery@3.1.1.min.js"></script>
   <script src="./js/alpinejs@3.2.3.js" defer ></script>
 </body>
