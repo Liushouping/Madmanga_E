@@ -293,9 +293,7 @@ class="relative">
 
 	const t = setTimeout(function(){
     $('.loader-story').fadeToggle("slow","linear");
-    typedOne.start();
-		typedTwo.stop();
-		typedThree.stop();
+    typedOne.reset();
   },17000);
 
 	function skip() {
@@ -325,21 +323,21 @@ class="relative">
 
 		  	if (index == 1) {
 		  		typedOne.start();
-		  		typedOne.reset();
+		  		// typedOne.reset();
 		  		typedTwo.stop();
 		  		typedThree.stop();
         }
 		  	if(index == 2){
 		  		typedOne.stop();
 		  		typedTwo.start();
-		  		typedOne.reset();
+		  		// typedOne.reset();
 		  		typedThree.stop();
         }
         if(index == 3){
 		  		typedOne.stop();
 		  		typedTwo.stop();
 		  		typedThree.start();
-		  		typedOne.reset();
+		  		// typedOne.reset();
         }
       },
 
