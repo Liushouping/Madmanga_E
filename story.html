@@ -1,16 +1,11 @@
 <!doctype html>
-<html 
-class="scroll-smooth">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./index.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.js" defer ></script>
+  <link rel="stylesheet" type="text/css" href="./css/fullPage@2.6.6.min.css" />
+  <script src="./js/tailwind@3.0.14.js"></script>
   <title>story</title>
   <script>
   tailwind.config = {
@@ -264,7 +259,12 @@ class="relative">
 	</section>
 
 </div>
+<script src="./js/typed@2.0.8.min.js"></script>
+<script src="./js/jquery@3.1.1.min.js"></script> 
+<script src="./js/fullPage@2.6.6.min.js"></script>
+<script src="./js/alpinejs@3.2.3.js" defer ></script>
 <script>
+
 	let typedOne = new Typed('#typed',{
 	  strings: ['A massive black hole of unkown origin suddenly appeared at the edge of the solar system and seemed to attract only and all manga-related energy available on Earth.<br><br>Unbearable anxiety arose as familiar manga characters and stories were transformed into splendid aurora rays devoured by the black hole.'],
 		typeSpeed: 70,
@@ -320,21 +320,18 @@ class="relative">
 
 		  	if (index == 1) {
 		  		typedOne.start();
-		  		// typedOne.reset();
 		  		typedTwo.stop();
 		  		typedThree.stop();
         }
 		  	if(index == 2){
 		  		typedOne.stop();
 		  		typedTwo.start();
-		  		// typedOne.reset();
 		  		typedThree.stop();
         }
         if(index == 3){
 		  		typedOne.stop();
 		  		typedTwo.stop();
 		  		typedThree.start();
-		  		// typedOne.reset();
         }
       },
 

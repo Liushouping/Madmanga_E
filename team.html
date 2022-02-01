@@ -1,14 +1,11 @@
 <!doctype html>
-<html 
-class="scroll-smooth">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./index.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/tailwind@3.0.14.js"></script>
   <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.js" defer ></script>
   <title>team</title>
   <script>
   tailwind.config = {
@@ -262,18 +259,6 @@ x-data="{ isOpen: false }">
 								class="text-teamfont text-center">Animation</p>
 							</div>
 		        </div>
-<!-- 		        <div class="swiper-slide">
-		        	<div class="flex justify-center items-center flex-col text-[14px] lg:text-[16px] tracking-onepx">
-								<picture 
-								class="pb-4">
-									<img src="./image/egg.png">
-								</picture>
-								<h3 
-								class="text-white text-center font-XtreemFatDemo pb-2">David</h3>
-								<p 
-								class="text-teamfont text-center">Story</p>
-							</div>
-		        </div> -->
 		      </div>
 		    </div>
 		    <div 
@@ -375,18 +360,6 @@ x-data="{ isOpen: false }">
 								class="text-teamfont text-center">public<br>relation</p>
 							</div>
 		        </div>
-<!-- 		        <div class="swiper-slide">
-		        	<div class="flex justify-center items-center flex-col text-[14px] lg:text-[16px] tracking-onepx">
-								<picture 
-								class="pb-4">
-									<img src="./image/egg.png">
-								</picture>
-								<h3 
-								class="text-white text-center font-XtreemFatDemo pb-2">David</h3>
-								<p 
-								class="text-teamfont text-center">Story</p>
-							</div>
-		        </div> -->
 		      </div>
 		    </div>
 
@@ -395,7 +368,7 @@ x-data="{ isOpen: false }">
 		    	<h3 
 		    	class="text-deeporange font-XtreemFatDemo text-[36px]">Title title title</h3>
 		    	<p 
-		    	class="text-teamfont text-left text-[14px] lg:text-[16px] tracking-onepx lg:px-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centu.</p>
+		    	class="text-teamfont text-left text-[14px] lg:text-[16px] tracking-onepx lg:px-10">MadManga is formed by talented multi-national team of elites with backgrounds from Silicon Valley entrepreneurs, consultant, VCs,  professional artists & event curation, gaming and tech companies. Team members consist of manga artists, animation artists, crypto gurus, agent of world famous urban artists, and event PM of mega-scale manga IPs working with well-known brands including but not limited to ONE PIECE, NARUTO, Barbie, Disney, Warner Bros, etc.</p>
 		    </div>
 			</div>
 		</div>
@@ -417,7 +390,8 @@ x-data="{ isOpen: false }">
 				<img src="./image/ft-logo-02.png" class="w-full">
 		</div>
 	</section>
-
+	<script src="./js/swiper@7.4.1.min.js"></script>
+  <script src="./js/alpinejs@3.2.3.js" defer ></script>
 	<script>
 		const swiper = new Swiper(".mySwiper1", {
         slidesPerView: 3,
